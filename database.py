@@ -1,5 +1,10 @@
 import os
+
 import psycopg2
+from celery import Celery
+
+BROKER = 'redis://pg:6379/0'
+app = Celery('rekapp', broker=BROKER, broker_connection_retry_on_startup=True)
 
 con = psycopg2.connect(
     user='postgres',

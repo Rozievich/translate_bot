@@ -23,5 +23,13 @@ services:
       - pg_data:/var/lib/postgres/data
     ports:
       - "5432:5432"
+  redis:
+    image: redis:alpine
+    restart: always
+    container_name: redis_pg
+    environment:
+      HOST: pg
+    ports:
+      - "6379:6379"
 volumes:
   pg_data:
