@@ -14,7 +14,7 @@ from state import DeleteState, UserState, AdminState, RekState, SetLang
 
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = '6191316739:AAGA7OSmgnTayqa3lG38hDkd2JX8-QcXr_A'
+TOKEN = 'Your Bot TOKEN'
 bot = Bot(TOKEN)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
